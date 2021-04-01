@@ -1,0 +1,59 @@
+ <html lang="en" xmlns:th="http://www.thymeleaf.org" 
+	th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>User Dashboard</title>
+</head>
+<body>
+	<section class=" align-items-center">
+	
+		<<div class="container" >
+			<div class="row">	
+				<div class="col-md-10 offset-md-2" >
+				
+					<div class="my-card mt-2 my-5" >
+					
+					
+					
+					<img src="" style="height: 200px; width: 200px;" class="my_profile_picture center" th:src="@{'/img/logo.png'}" alt="profile photo" />                             
+					
+					<h1 class="text-center mt-5 text-secondary">
+						Start adding your employees
+					</h1>
+					
+					<a th:href="@{/user/add-contact}" class="btn btn-primary align-center mt-4 btn-block text-uppercase">
+							Add New Employee
+					</a>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+		
+	</section>
+</body>
+</html>
+
+
+
+
+
+ <!-- <html lang="en" xmlns:th="http://www.thymeleaf.org" 
+	th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>User Dashboard</title>
+</head>
+<body>
+	<section class=" align-items-center ">
+		<div class="text-center">
+		
+			<h1>This is your private dashboard</h1>
+			
+		</div>
+	</section>
+</body>
+</html> -->

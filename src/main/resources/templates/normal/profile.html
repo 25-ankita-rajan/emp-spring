@@ -1,0 +1,64 @@
+ <html lang="en" xmlns:th="http://www.thymeleaf.org" 
+	th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>User Dashboard</title>
+</head>
+<body>
+	<section class=" align-items-center ">
+		
+		
+		<div class="container" >
+			<div class="row">	
+				<div class="col-md-10 offset-md-2" >
+				
+					<div class="my-card mt-2" th:if=${user} >
+				 		
+				 		<h1 class="mt-5 text-center">
+				 			<span>Hello </span>  <span th:text="${user.name}"></span> <span> !!</span>
+				 			
+				 		</h1>
+				 		
+				 		
+				 		<table class="table">
+						  <thead>
+						    <tr>
+						      <th scope="col">#ID</th>
+						      <th scope="col"><span th:text="${user.id}"></span></th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">Email</th>
+						      <td><span th:text="${user.email}"></span></td>
+						    </tr>
+						    
+						    <tr>
+						      <th scope="row">Is Active</th>
+						      <td><span th:text="${user.enabled} ? 'Active' : 'Not Active'"></span></td>
+						    </tr>
+						    
+						     <tr>
+						      <th scope="row">Role</th>
+						      <td><span th:text="${user.role}"></span></td>
+						    </tr>
+						    
+						  </tbody>
+						</table>
+						
+						<!-- <div class="container mt-5">
+							<button  th:onClick="|deleteContact(${userEmp.empid})|" class="btn btn-danger btn-sm btn-block w-50">Delete</button>
+				      		<button class="btn btn-primary btn-sm w-50 mt-3">Update</button>
+						</div> -->
+				 		
+				 	</div>
+				</div>
+			</div>
+				
+		</div> 	
+		
+		
+		
+	</section>
+</body>
+</html>
